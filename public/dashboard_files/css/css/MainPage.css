@@ -1,0 +1,855 @@
+/* variable */
+:root{
+    --main-color : #19c8fa ;
+    --secound-color : #777 ;
+    --section-padding : 100px ;
+}
+/* start global rules  */
+
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    padding-left:15px ;
+    padding-right: 15px ;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* phone screen */
+@media (min-width:768px)
+{
+    .container{
+        width: 750px ;
+    }
+}
+
+/* meduim screen */
+@media (min-width:992px)
+{
+    .container{
+        width: 970px ;
+    }
+}
+
+
+/* large screen */
+@media (min-width:1200px)
+{
+    .container{
+        width: 1170px ;
+    }
+}
+/* end global rules  */
+
+/* strat header  */
+
+header{
+    position: absolute;
+    left : 0;
+    width:100% ;
+    z-index: 2;
+}
+
+header .container{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 97px ;
+}
+
+header .container::after{
+    content: '';
+    height: 1px ;
+    position: absolute;
+    width: calc(100% - 30px ) ;
+    background-color:#eee;
+    bottom: -1px ;
+    left: 15px  ;
+}
+
+.logo .image img {
+    height: 60px ;
+}
+
+
+header nav {
+
+    flex: 1 ;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+
+header nav ul{
+    display: flex;
+    list-style: none;
+}
+
+header nav a{
+text-decoration: none;
+padding: 40px 30px  ;
+display: block;
+color:white ;
+font-size: 20px ;
+transition: 0.3s;
+position: relative;
+z-index: 2;
+}
+
+header nav a.active ,
+header nav a:hover{
+    color: #eee;
+    border-bottom: #eee solid 2px ;
+
+}
+
+nav .form{
+    width: 50px ;
+    position: relative;
+    height: 40px;
+    left:10px ;
+    border-left: white 2px solid ;
+    height: 30px ;
+}
+
+nav .form i{
+    font-size: 20px ;
+    color: white;
+    position: absolute;
+    left: 50% ;
+    top: 50% ;
+    transform: translate(-50% , -50%);
+}
+nav .form i:hover{
+    color:#eee ;
+    cursor: pointer;
+}
+nav ul li a i{
+    color:white ;
+    font-size: 25px ;
+}
+nav ul li a i:hover{
+    color: #eee;
+}
+
+/* start resonsive header  */
+
+header nav .toggle-menu{
+    color: white ;
+    font-size: 20px ;
+}
+
+@media (min-width :768px )
+{
+    header nav .toggle-menu{
+        display: none ;
+    }
+}
+
+@media (max-width :767px )
+{
+    header nav ul {
+        display: none ;
+    }
+
+
+
+    header nav .toggle-menu:hover + ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100% ;
+        left : 0% ;
+        width: 100% ;
+        background-color: rgba(36, 18, 18, 0.429);
+
+    }
+
+    header nav .toggle-menu:hover + ul a{
+        text-align: center;
+        font-size: 30px ;
+        color : white ;
+        border-bottom: 1px solid rgb(17, 16, 16) ;
+    }
+    header nav .toggle-menu:hover + ul a i {
+        color: white ;
+        font-size: 35px ;
+    }
+}
+
+/* end responsive header  */
+
+/* strat facing page  */
+.background {
+    background-image: url('../../img/c1920_emeraldaresortninhbinh1-448790.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    position:relative ;
+}
+
+.mainTitle{
+    position: absolute;
+    top:37% ;
+    left:39% ;
+    max-width: 350px;
+    color : white ;
+    text-align: center;
+}
+.mainTitle p{
+    font-size: 18px;
+    padding: 0 0 10px 0 ;
+    margin-bottom: 10px;
+}
+.mainTitle button a{
+    text-decoration: none;
+    color: white ;
+}
+.mainTitle button{
+    width: 150px;
+    height:40px;
+    background-color: #FD19EA;
+    border:none;
+    border-radius: 100px;
+    font-size: 18px;
+}
+.mainTitle button:hover{
+    background-color: #FD19EAC9;
+}
+/* start respnsive maintext  */
+@media (max-width :767px )
+{
+    .mainTitle{
+        text-align: center;
+        left : 5% ;
+        opacity: 0.8;
+    }
+}
+/* end  respnsive maintext  */
+
+
+/* start services  */
+.services{
+    padding-top : 150px ;
+    padding-bottom: 150px;
+}
+.services .component{
+
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.services .component h2{
+    font-size: 35px;
+    padding-bottom: 10px;
+}
+.services .component span{
+    color: brown;
+}
+.services .component p{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.services .parentofsection{
+    display : flex ;
+    flex-wrap: wrap;
+    justify-content: center ;
+    padding-top: 50px;
+}
+.services section{
+    border: 1px #eee solid ;
+    position: relative;
+    width: 350px ;
+    height: 290px;
+}
+.services section img{
+    width: 100%;
+    height: 250px;
+}
+
+.services section h3{
+    text-align: center;
+    /* text-shadow:2px 1px 3px black ; */
+}
+/* start responsive services */
+@media (max-width : 767px )
+{
+    .parentofsection section {
+        margin-bottom: 15px ;
+        flex-basis: 100% ;
+
+    }
+}
+/* end responsive services */
+/* start section electronic  */
+.electronic{
+    padding-top: 100px ;
+    padding-bottom: 100px ;
+    box-shadow: 1px 2px 3px 2px silver ;
+
+}
+.electronic .component{
+
+    text-align: center;
+    padding-bottom:40px;
+}
+.electronic .component h2{
+    font-size: 35px;
+}
+.electronic .container{
+    position: relative;
+}
+
+
+.electronic .scroll-section{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 320px ;
+    height: 450px;
+    gap:5px ;
+    position: relative;
+    overflow-x: auto;
+    scroll-behavior:smooth;
+}
+
+.electronic .scroll-section section {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    border:2px solid rgb(207, 201, 201) ;
+    overflow: hidden;
+    position: relative;
+}
+
+.electronic section img{
+    position: absolute;
+    width: 100%;
+    height: 300px;
+}
+
+.electronic section h4{
+    position: absolute;
+    color: black;
+    font-size: 20px ;
+    bottom : 90px  ;
+    left: 10px;
+}
+
+.electronic section p{
+    position:absolute;
+    bottom: 65px;
+    left:10px ;
+    font-size: 17px ;
+}
+
+.electronic section a{
+    position: absolute;
+    bottom: 10px;
+    left:6px ;
+    text-decoration: none;
+    background-color: green;
+    color: white;
+    padding: 13px ;
+    font-size: 15px ;
+    border-radius: 20px ;
+    text-transform: capitalize;
+}
+.electronic section .heart {
+position: absolute;
+color:green ;
+font-size: 30px ;
+left : 130px ;
+bottom: 3px ;
+background-color: transparent;
+}
+.electronic section .heart:hover{
+    background-color: transparent;
+    color: red;
+}
+.electronic section a:hover {
+    background-color: rgb(14, 163, 14);
+}
+
+.scroll-section::-webkit-scrollbar{
+    -webkit-appearance:none;
+
+}
+
+.electronic .container .icon{
+    position: absolute;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.922);
+    font-size: 50px;
+    outline: none;
+    border: none;
+    padding: 0px 20px;
+    bottom: 18px ;
+    left :-65px ;
+    cursor: pointer;
+    height: 433px;
+    z-index: 2;
+}
+
+.icon1{
+    color: white;
+    background-color:rgba(0, 0, 0, 0.922);
+    font-size: 50px;
+    outline: none;
+    border: none;
+    padding: 0px 20px;
+    position: absolute;
+    bottom: 18px ;
+    right:-65px ;
+    cursor: pointer;
+    height: 433px;
+    z-index: 2;
+}
+.electronic .container .icon:hover{
+    color: rgba(173, 155, 165, 0.922);
+}
+.icon1:hover{
+    color: rgba(173, 155, 165, 0.922);
+}
+
+/* start responsive electronic   */
+@media (max-width : 768px)
+{
+    .electronic .container .icon , .icon1 {
+        display: none;
+    }
+    .electronic .scroll-section{
+        grid-auto-columns: 350px;
+        gap : 1px ;
+    }
+    .electronic
+    {
+        padding: 150px 0px;
+    }
+    .electronic .component
+    {
+        padding-bottom: 80px ;
+    }
+}
+/* end responsive electronic   */
+
+/* end section electronic  */
+
+/* start section clothes fashion  */
+.fashionClothes{
+    padding-top: 100px ;
+    padding-bottom: 150px ;
+    box-shadow: 1px 1px 1px 1px silver ;
+
+}
+.fashionClothes .component{
+
+    text-align: center;
+    padding-bottom:40px;
+}
+.fashionClothes .component h2{
+    font-size: 35px;
+    padding: 10px;
+}
+
+
+.fashionClothes .container{
+    position: relative;
+}
+
+
+.fashionClothes .scroll-sections{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 340px ;
+    height: 450px;
+    gap: 5px ;
+    position: relative;
+    overflow-x: auto;
+    scroll-behavior:smooth;
+}
+
+.fashionClothes .scroll-sections section {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    border:1px solid rgb(207, 201, 201) ;
+    overflow: hidden;
+    position: relative;
+}
+
+.fashionClothes section img{
+    position: absolute;
+    width: 100%;
+    height: 300px;
+}
+
+.fashionClothes section h4{
+    position: absolute;
+    color: black;
+    font-size: 20px ;
+    bottom : 90px  ;
+    left: 10px;
+}
+
+.fashionClothes section p{
+    position:absolute;
+    bottom: 65px;
+    left:10px ;
+    font-size: 17px ;
+}
+
+.fashionClothes section a{
+    position: absolute;
+    bottom: 10px;
+    left:6px ;
+    text-decoration: none;
+    background-color: green;
+    color: white;
+    padding: 13px ;
+    font-size: 15px ;
+    border-radius: 20px ;
+    text-transform: capitalize;
+}
+.fashionClothes section .heart {
+position: absolute;
+color:green ;
+font-size: 30px ;
+left : 130px ;
+bottom: 3px ;
+background-color: transparent;
+}
+.fashionClothes section .heart:hover{
+    background-color: transparent;
+    color: red;
+}
+.fashionClothes section a:hover {
+    background-color: rgb(14, 163, 14);
+}
+
+.scroll-sections::-webkit-scrollbar{
+    -webkit-appearance:none;
+
+}
+
+.fashionClothes .container .icon{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.922);
+    font-size: 50px;
+    outline: none;
+    border: none;
+    padding: 0px 20px;
+    position: absolute;
+    bottom: 18px ;
+    left :-65px ;
+    cursor: pointer;
+    height: 433px;
+    z-index: 2;
+}
+.icon1{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.922);
+    font-size: 50px;
+    outline: none;
+    border: none;
+    padding: 0px 20px;
+    position: absolute;
+    bottom: 18px ;
+    right:-65px ;
+    cursor: pointer;
+    height: 433px;
+    z-index: 2;
+}
+.fashionClothes .container .icon:hover{
+    color:rgba(173, 155, 165, 0.922);
+}
+.icon1:hover{
+    color: rgba(173, 155, 165, 0.922);
+}
+
+/* start responsive fashion clothes   */
+@media (max-width : 768px)
+{
+    .fashionClothes .container .icon , .icon1 {
+        display: none;
+    }
+    .fashionClothes .scroll-section{
+        grid-auto-columns: 350px;
+        gap : 1px ;
+    }
+    .fashionClothes
+    {
+        padding: 150px 0px;
+    }
+    .fashionClothes .component
+    {
+        padding-bottom: 80px ;
+    }
+}
+
+/* end responsive fashion cloths   */
+
+/* end sction clothes fashion  */
+
+/* start section sports  */
+.sports {
+    padding-top: 150px ;
+    padding-bottom: 150px;
+}
+.sports .component h3{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px black;
+    padding-bottom: 40px ;
+}
+.sports .container{
+    position: relative;
+}
+
+.scroll-sectionOfsports{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 350px;
+    height: 400px;
+    gap: 5px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+.scroll-sectionOfsports section{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border:2px #eee solid ;
+
+}
+.scroll-sectionOfsports section img{
+    width:100% ;
+    height: 250px;
+}
+.scroll-sectionOfsports section h4{
+padding: 10px 0px 1px 10px ;
+font-size: 20px;
+}
+.scroll-sectionOfsports section p{
+padding: 5px 0px 20px 10px ;
+}
+.scroll-sectionOfsports section a{
+background-color: green ;
+padding: 10px;
+border-radius: 10px;
+margin:5px ;
+color: white;
+text-decoration: none;
+}
+.scroll-sectionOfsports section a:hover{
+background-color: rgb(10, 153, 10);
+}
+.scroll-sectionOfsports section .heart {
+    background-color: transparent;
+    color : green ;
+    font-size: 25px ;
+}
+.scroll-sectionOfsports section .heart:hover {
+color :red ;
+background-color: transparent;
+}
+.scroll-sectionOfsports::-webkit-scrollbar{
+    -webkit-appearance: none ;
+}
+
+.sports .container .icon {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.922);
+    font-size: 50px;
+    outline: none;
+    border: none;
+    padding: 0px 20px;
+    position: absolute;
+    bottom: 18px ;
+    left :-65px ;
+    cursor: pointer;
+    height: 380px;
+    z-index: 2;
+}
+.sports .container  button {
+    background-color: transparent;
+    color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.sports .container .icon i {
+    color: white ;
+    position: relative;
+    padding-top: 150px;
+    padding-bottom: 150px ;
+}
+.sports .container .icon1 i {
+    color: white ;
+    position: relative;
+    padding-top: 150px;
+    padding-bottom: 150px ;
+
+}
+.sports .icon1{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.922);
+    font-size: 50px;
+    outline: none;
+    border: none;
+    padding: 0px 20px;
+    position: absolute;
+    bottom: 18px ;
+    right:-65px ;
+    cursor: pointer;
+    height: 380px;
+    z-index: 2;
+}
+.sports .icon1:hover i{
+    color: rgba(173, 155, 165, 0.922);
+}
+.sports .icon:hover i{
+    color: rgba(173, 155, 165, 0.922);
+}
+@media (max-width : 767px)
+{
+    .sports .container .icon , .icon1 {
+        display: none;
+    }
+    .sports .scroll-section{
+        grid-auto-columns: 350px;
+        gap : 1px ;
+    }
+    .sports
+    {
+        padding: 150px 0px;
+    }
+    .sports .component
+    {
+        padding-bottom: 80px ;
+    }
+}
+/* end section sports  */
+/* start about us  */
+.about_us{
+    padding-top : 150px ;
+    padding-bottom: 150px;
+    border-top: 1px solid silver ;
+}
+.about_us .component{
+
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 50px;
+}
+.about_us .component h2{
+    font-size: 35px;
+    padding-bottom: 10px;
+}
+.about_us .component span{
+    color: brown;
+}
+.about_us .component p{
+    font-size: 20px;
+    font-style: italic;
+}
+.about_us .parentOfsecion
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+.about_us .parentOfsecion section
+{
+    width :500px ;
+    /* border: solid 1px red ; */
+}
+.about_us .parentOfsecion img
+{
+    width : 400px ;
+    /* border : 1px solid red ; */
+}
+@media (max-width : 768px )
+{
+    .about_us .parentOfsecion img
+    {
+        display: none ;
+    }
+    .about_us .parentOfsecion section .text
+    {
+        text-align: center;
+        padding-right: 5px ;
+    }
+
+
+
+}
+.about_us .parentOfsecion section .text
+{
+    padding-top: 40px ;
+    padding-left: 20px ;
+}
+.about_us .parentOfsecion section h1
+{
+    color: brown ;
+}
+.about_us .parentOfsecion section p
+{
+    line-height: 1.7;
+    padding-top: 25px;
+    opacity: 0.7;
+}
+/* end about us  */
+footer
+{
+    background-color: rgb(19, 11, 11);
+
+}
+footer .parentOffooter {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+footer section {
+    width : 400px ;
+}
+footer section .links
+{
+    padding-top: 10px ;
+    padding-bottom: 10px ;
+}
+footer section a{
+    display: block;
+    text-align: center;
+    line-height: 1.5;
+    text-decoration: none;
+    font-weight: bold;
+    color: white ;
+    opacity: 0.7;
+    transition: all 1s;
+}
+footer section a:hover
+{
+    opacity: 1;
+}
+footer p
+{
+    color : white ;
+    font-size: 25px ;
+    text-align: center;
+}
