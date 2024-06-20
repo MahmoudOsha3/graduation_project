@@ -3,10 +3,12 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
-        "build": "vite build"
+        "build": "vite build",
+        "predeploy":"npm run build",
+        "deploy": "gh-pages -d build",
     },
     "devDependencies": {
-        "homepage":"http://MahmoudOsha3",
+        "homepage":"http://MahmoudOsha3.github.io/graduation_project",
         "@popperjs/core": "^2.11.6",
         "axios": "^1.6.4",
         "bootstrap": "^5.2.3",
